@@ -19,9 +19,37 @@ class Card extends Component{
        
     }
 
+    starRating=(repo,follower)=>
+    {
+        if(repo<10 || follower<20)
+        {
+            return 1;
+        }
+        else if((repo>=10 && repo<20) || (follower>=20 && follower<30))
+        {
+            return 2;
+        }
+        else if((repo>=20 && repo<40) || (follower>=30 && follower<50))
+        {
+            return 3;
+        }
+        else if(repo>=40 || follower>50 )
+        {
+            return 4
+        }
+        else{
+            return 0;
+        }
+    }
+
+
     render()
     {
-        
+        let checked
+        let follower=this.props.post.followers
+        let repo=this.props.post.public_repos
+        checked=1+this.starRating(repo,follower)
+        console.log(checked)
         
         return(
             <div >
@@ -29,9 +57,9 @@ class Card extends Component{
                 <div className={classes.card}>
                 <Link to={'/'+this.props.id}> <img src={this.props.post.avatar_url} alt={giticon}/></Link>
                     <div className={classes.container}>
-                        <h4><b>{this.props.title}</b></h4>
-                        <p>{this.props.body}</p>
-                        <div><Star/></div>
+                        <h4><b>{this.props.post.title}</b></h4>
+                        <p>{this.props.post.bio}</p>
+                        <div><Star checked={checked}/></div>
 
                     </div>
                 </div>

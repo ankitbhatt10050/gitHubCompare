@@ -3,9 +3,10 @@ import * as classes from  './Star.css';
 const Star=(props)=>{
    let star=[]
    let Darkstar=[]
-   let checkedstar=3
-   let uncheckedstar=2
+   let checkedstar=props.checked;
+   let uncheckedstar=5-checkedstar;
 
+   console.log(props.checked,uncheckedstar);
    
    
    for(let i=0;i<checkedstar;i++)

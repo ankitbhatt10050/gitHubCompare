@@ -8,6 +8,9 @@
     left:50%;
     margin-left: 500px;
     margin-top: 50px;
+    z-index: 0.1px;
+    color: #86868b;
+    background-color:whitesmoke;
   }
   
   /* Add rounded corners to the top left and the top right corner of the image */

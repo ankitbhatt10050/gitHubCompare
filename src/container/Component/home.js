@@ -17,7 +17,7 @@ class home extends Component{
                 posts.map(post=>{
                     return(
                         <div key={post.id}>                            
-                                <Card id={post.id} title={post.name} body={post.bio} />
+                                <Card id={post.id} />
                         </div>
                     )
                 })
@@ -30,7 +30,9 @@ class home extends Component{
             
             <div>
                 <InputTag/>
-                {postList}
+                <div style={{backgroundColor:'#86868b',opacity:'0.9',marginTop:"55px",paddingTop:"1px"}}>
+                    {postList}
+                </div>
             </div>
         );
     }

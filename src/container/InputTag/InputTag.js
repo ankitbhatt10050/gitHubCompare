@@ -61,7 +61,7 @@ class InputTag extends Component{
 
         return(
             <div>
-                <h2>Search!!</h2>
+                <h2 style={{textAlign:"center"}}>Search!!</h2>
                 <div className={classes.skill}>
                     <ul>
                         {skills.map((skill,i)=>{
