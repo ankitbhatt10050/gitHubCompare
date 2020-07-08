@@ -4,25 +4,9 @@ import axios from 'axios';
 import {connect} from 'react-redux';
 import Aux from '../../hoc/auxillary';
 import {delete_post} from '../actions/action';
-import bk from '../../GitHub-bk.png';
+import classes from './post.css';
 
 class Post extends Component{
-    // state={
-    //     post:null
-    // }
-    // componentDidMount()
-    // {
-    //     let id=this.props.match.params.post_id
-    //     axios.get('https://jsonplaceholder.typicode.com/posts/'+id).then(res=>{
-    //         this.setState({post:res.data})
-    //     })
-        
-    // }
-
-    componentDidMount()
-    {
-        // console.log('current State',this.props.post.id)
-    }
 
     handleClick=()=>
     {
@@ -35,15 +19,43 @@ class Post extends Component{
         const post=this.props.post?(
              
                 <Aux >
-                    <h4 style={{textAlign:"center"}}>
+                  <h4>
                         {this.props.post.name}
                     </h4>
-                <p style={{textAlign:"center"}}>
+                
+                <p>
                     {this.props.post.bio}
                 </p>
-                <div style={{textAlign:"center"}}>
+                <p>
+                    <h6>Follower</h6>
+                    {this.props.post.followers}
+                </p>
+
+                <p>
+                    <h6>Following</h6>
+                    {this.props.post.following}
+                </p>
+
+                
+                <p>
+                    <h6>Repos</h6>
+                    {this.props.post.public_repos}
+                </p>
+
+                
+                <p>
+                    <h6>Location</h6>
+                    {this.props.post.location}
+                </p>
+
+                
+                <p>
+                    <h6>Email</h6>
+                    {this.props.post.email}
+                </p>
+                <div>
                   <button style={{ width:"80px", height:"20px"}} onClick={this.handleClick}>Delete</button>
-                </div>  
+                </div> 
                 </Aux>
                 
                
@@ -51,7 +63,7 @@ class Post extends Component{
         (<div style={{textAlign:"center"}}>Loading Post...</div>)
 
         return(
-            <div style={{backgroundColor:'#E7E7E7'}}>
+            <div className={classes.post}>
                 <p>
                     {post}
                 </p>

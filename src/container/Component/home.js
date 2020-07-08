@@ -30,7 +30,7 @@ class home extends Component{
             
             <div>
                 <InputTag/>
-                <div style={{backgroundColor:'#86868b',opacity:'0.9',marginTop:"55px",paddingTop:"1px"}}>
+                <div>
                     {postList}
                 </div>
             </div>

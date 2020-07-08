@@ -6,7 +6,8 @@
     height: auto;
     flex-flow: column;
     left:50%;
-    margin-left: 500px;
+    
+    margin-left: 45%;
     margin-top: 50px;
     z-index: 0.1px;
     color: #86868b;
@@ -27,4 +28,12 @@
   /* Add some padding inside the card container */
   .container {
     padding: 2px 16px;
+  }
+
+  @media (max-width:600px)
+  {
+    .Card{
+        margin-left: 0 !important;
+        
+    }
   }
