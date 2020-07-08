@@ -44,15 +44,9 @@ class Card extends Component{
 
 const mapStateToProps = (state,ownProps)=>{
     let id=ownProps.id
-   
-    // let x=state.posts.find(post=>parseInt(post.id)===parseInt(id))
-    // console.log(x)
     return {
         post:state.posts.find(post=>parseInt(post.id)===parseInt(id))
         
     }
 }
-
-
 export default connect(mapStateToProps)(Card);
-// export default Card;

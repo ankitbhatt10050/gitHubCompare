@@ -52,7 +52,6 @@ const reducer=(state=initState,action)=>{
             case REMOVE_SKILLS:
             let x=[]
             x=state.skills.splice(action.index,1)            
-            //state.posts.concat(newArr)
             return{
                 ...state,
                 skills:x
@@ -65,22 +64,6 @@ const reducer=(state=initState,action)=>{
     }
 
  
-
-    // if(action.type==='DELETE_POST')
-    // {
-    //     let newPost=state.posts.filter(post=>{
-    //         return action.id!==post.id
-    //     })
-
-    //     return {
-    //         ...state,
-    //         posts:newPost
-    //     }
-    // }
-
-
-
-    // return state
 }
 
 export default reducer;

@@ -15,26 +15,6 @@ export const delPo=(id)=>{
         id:id
     };
 }
-//asyn code for deleting
-// export const delete_post=(id)=>{
-//     return dispatch=>{
-//         setTimeout(()=>{
-//             dispatch(delPo(id))
-//         },2000);
-       
-// }
-// }
-
-//we can get our previous state
-//asyn code for deleting
-// export const delete_post=(id)=>{
-//     return (dispatch,prevState)=>{
-//         setTimeout(()=>{
-//             dispatch(delPo(id))
-//         },2000);
-       
-// }
-// }
 
 
 export const delete_post=(id)=>{
