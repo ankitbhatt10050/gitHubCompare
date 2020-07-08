@@ -72,8 +72,8 @@
     "npm": "6.13.4"
   },
   "scripts": {
-    "start": "node scripts/start.js",
-    "build": "node scripts/build.js",
+    "start": "serve build",
+    "build": "react script start",
     "test": "node scripts/test.js"
   },
   "eslintConfig": {
