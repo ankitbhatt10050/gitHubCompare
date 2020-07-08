@@ -3,10 +3,33 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import {createStore,applyMiddleware,compose} from 'redux';
+import {Provider} from 'react-redux';
+import rootReducer from './Reducer/reducer';
+import thunk from 'redux-thunk';
+
+// const logger=store=>{
+//     return next=>{
+//       return action=>{
+//           console.log('[middleware]',action);
+//            const result=next(action);
+//            console.log('[middleware]',store.getState())
+//            return result;
+//       }
+//     }
+// };
+
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+
+const store=createStore(rootReducer,composeEnhancers(applyMiddleware(thunk)));
+
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Provider store={store}>
+       <App />
+    </Provider>
+    
   </React.StrictMode>,
   document.getElementById('root')
 );

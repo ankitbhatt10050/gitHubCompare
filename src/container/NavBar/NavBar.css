@@ -1,0 +1,22 @@
+.NavBar{
+    width:100%;
+    height: 100px;
+    background-color: darkslategray;
+    display: flex;
+    
+    align-items: center;
+    box-shadow: 0 2px 1px #ccc;
+    
+    padding: 10px 0;
+}
+ .NavBar h2{
+    color: whitesmoke;
+    padding:150px;
+}
+.NavBar h4{
+    color: thistle;
+}
+a{
+    text-decoration: none;
+    color: whitesmoke;
+}
