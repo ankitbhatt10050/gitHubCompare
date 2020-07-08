@@ -1,5 +1,5 @@
 import axios from 'axios';
-
+import {NotificationContainer, NotificationManager} from 'react-notifications';
 
 export const DELETE_POST='DELETE_POST';
 export const SET_POST='SET_POST';
@@ -37,6 +37,9 @@ export const initPost=(uname)=>{
         axios.get('https://api.github.com/users/'+uname)
         .then(res=>{
             dispatch(setPost(res));
+        }).catch(err =>{
+            console.log(err)
+            alert('User Not Found')
         })
 
     };

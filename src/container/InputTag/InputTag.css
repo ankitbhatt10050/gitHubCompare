@@ -3,6 +3,7 @@
     background: #ffffff;
     border: 0.15em solid #d6d6d6;
     border-radius: 2px;
+    width: 40%;
     
   }
   
@@ -35,7 +36,7 @@
   
   ul li button{
     align-items: center;
-    background: #333333;
+    background: #333333;  
     border: none;
     color: #ffffff;
     cursor: pointer;

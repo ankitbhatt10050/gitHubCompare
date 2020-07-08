@@ -3,7 +3,7 @@
     transition: 0.3s;
     border-radius: 5px; /* 5px rounded corners */
     width: 200px;
-    height: 350px;
+    height: auto;
     flex-flow: column;
     left:50%;
     margin-left: 500px;
